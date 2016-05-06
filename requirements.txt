@@ -7,7 +7,7 @@ South
 simplejson
 #pil
 pexpect
-django-guardian
+django-guardian==1.2
 celery
 MySQL-python
 python-ldap
