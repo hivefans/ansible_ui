@@ -57,7 +57,7 @@ Install
 
         cd ansible-ui
         pip install -r requirements.txt
-        pip install PIL --allow-external PIL --allow-unverified PIL
+        pip install pillow
     
 
 * 配置ldap、数据库和邮件信息
@@ -65,7 +65,7 @@ Install
 
         cd desktop/core/internal
         vim settings_local.py 
-        # 修改 LDAP Datebase Mail 和ansible_playbook命令位置(which ansible_playbook)配置
+        # 修改 LDAP Datebase Mail 和ansible_playbook命令位置(which ansible_playbook)配置 mysql用户密码
         如果需要使用ldap，还需要修改settings.py，去掉下面行的注释
         #'desktop.core.auth.backend.LdapBackend',
 
@@ -137,11 +137,6 @@ Run
         修改ansible.wsgi : yourvirtualenv 指向实际目录
         修改ansible_uwsgi.ini : 修改相关配置
         启动 uwsgi： uwsgi --ini ansible_uwsgi.ini -d ansible.log
-
-
-Demo
-=====
-* http://115.28.87.99:8888 用户名:admin 密码:ansible (由于服务器资源紧张，暂时关闭)
 
 Problem
 =====
